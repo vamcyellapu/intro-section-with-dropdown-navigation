@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/529068a966.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Intro section with dropdown navigation</title>
+  </head>
+  <body class="font-sans box-border">
+    <header class="text-mediumGray">
+      <nav
+        class="flex justify-between items-center py-5 px-5 lg:px-10 relative"
+      >
+        <i
+          class="fa-solid fa-bars absolute right-5 top-3 text-2xl cursor-pointer lg:hidden"
+        ></i>
+        <div class="flex gap-16">
+          <img src="./images/logo.svg" alt="" />
+          <ul class="hidden lg:flex gap-10">
+            <li
+              class="flex items-center gap-2 hover:text-almostBlack transition-all duration-200"
+            >
+              <a href="#">Features</a>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </li>
+            <li
+              class="flex items-center gap-2 hover:text-almostBlack transition-all duration-200"
+            >
+              <a href="#">Company</a>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </li>
+            <li class="hover:text-almostBlack transition-all duration-200">
+              <a href="#">Careers</a>
+            </li>
+            <li class="hover:text-almostBlack transition-all duration-200">
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hidden lg:flex gap-10 items-center">
+          <a href="#" class="hover:text-almostBlack transition-all duration-200"
+            >Login</a
+          >
+          <button
+            class="border-2 border-mediumGray rounded-xl px-4 py-2 hover:border-almostBlack hover:text-almostBlack transition-all duration-200"
+          >
+            Register
+          </button>
+        </div>
+      </nav>
+      <section class="grid lg:grid-cols-2 container mx-auto gap-10 lg:p-10">
+        <article
+          class="flex flex-col items-center text-center gap-5 lg:items-start lg:text-left md:gap-10 md:self-end p-4"
+        >
+          <h1 class="text-4xl md:text-7xl text-almostBlack font-bold">
+            <span class="lg:block">Make</span> remote work
+          </h1>
+          <p class="md:text-lg leading-6 md:max-w-md">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button
+            class="bg-almostBlack text-white px-6 py-3 rounded-xl border border-almostBlack font-bold hover:bg-white hover:text-almostBlack transition-all duration-200 ease-out"
+          >
+            Learn more
+          </button>
+          <ul class="flex items-center gap-5 md:gap-10 mt-5 lg:mt-28">
+            <li>
+              <img
+                src="./images/client-databiz.svg"
+                alt="client-databiz"
+                class=""
+              />
+            </li>
+
+            <li>
+              <img
+                src="./images/client-audiophile.svg"
+                alt="client-audiophile"
+                class=""
+              />
+            </li>
+
+            <li>
+              <img src="./images/client-meet.svg" alt="client-meet" class="" />
+            </li>
+            <li>
+              <img
+                src="./images/client-maker.svg"
+                alt="client-maker"
+                class=""
+              />
+            </li>
+          </ul>
+        </article>
+        <picture
+          class="max-w-lg justify-self-center row-start-1 row-end-2 lg:col-start-2 lg:col-end-3"
+        >
+          <source
+            media="(min-width: 1024px)"
+            srcset="images/image-hero-desktop.png"
+          />
+          <img src="./images/image-hero-mobile.png" alt="hero image" />
+        </picture>
+      </section>
+    </header>
+  </body>
+</html>
+<!-- 
+  Features
+  Company
+  Careers
+  About
+
+  Login
+  Register
+
+  Make remote work
+
+  Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+
+  Learn more -->
