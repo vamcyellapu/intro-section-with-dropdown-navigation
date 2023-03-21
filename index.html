@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Intro section with dropdown navigation</title>
   </head>
-  <body class="font-sans box-border">
-    <header class="text-mediumGray">
+  <body class="font-sans box-border relative">
+    <header class="text-mediumGray before:bg-black/50 before:min-h-screen">
       <nav
         class="flex justify-between items-center py-5 px-5 lg:px-10 relative"
       >
@@ -34,16 +34,85 @@
           <img src="./images/logo.svg" alt="" />
           <ul class="hidden lg:flex gap-10">
             <li
-              class="flex items-center gap-2 hover:text-almostBlack transition-all duration-200"
+              class="features flex items-center gap-2 transition-all duration-200 group relative cursor-pointer"
             >
-              <a href="#">Features</a>
-              <i class="fa-solid fa-chevron-down text-xs"></i>
+              <a href="#" class="group-hover:text-almostBlack">Features</a>
+              <i
+                class="fa-solid fa-chevron-down text-xs group-hover:-rotate-180 duration-200 group-hover:text-almostBlack"
+              ></i>
+              <ul
+                class="features-list flex flex-col gap-3 bg-white p-6 shadow-2xl rounded-xl absolute top-7 -left-16 hidden"
+              >
+                <li
+                  class="hover:text-almostBlack text-sm flex items-center justify-start gap-3"
+                >
+                  <div class="w-4 h-4 flex justify-center">
+                    <img
+                      src="./images/icon-todo.svg"
+                      alt=""
+                      class="object-cover"
+                    />
+                  </div>
+                  <a href="#">Todo List</a>
+                </li>
+                <li
+                  class="hover:text-almostBlack text-sm flex items-center justify-start gap-3"
+                >
+                  <div class="w-4 h-4 flex justify-center">
+                    <img
+                      src="./images/icon-calendar.svg"
+                      alt=""
+                      class="object-cover"
+                    />
+                  </div>
+                  <a href="#">Calendar</a>
+                </li>
+                <li
+                  class="hover:text-almostBlack text-sm flex items-center justify-start gap-3"
+                >
+                  <div class="w-4 h-4 flex justify-center">
+                    <img
+                      src="./images/icon-reminders.svg"
+                      alt=""
+                      class="object-cover"
+                    />
+                  </div>
+                  <a href="#">Reminders</a>
+                </li>
+                <li
+                  class="hover:text-almostBlack text-sm flex items-center justify-start gap-3"
+                >
+                  <div class="w-4 h-4 flex justify-center">
+                    <img
+                      src="./images/icon-planning.svg"
+                      alt=""
+                      class="object-cover"
+                    />
+                  </div>
+                  <a href="#">Planning</a>
+                </li>
+              </ul>
             </li>
             <li
-              class="flex items-center gap-2 hover:text-almostBlack transition-all duration-200"
+              class="company flex items-center gap-2 transition-all duration-200 group cursor-pointer"
             >
-              <a href="#">Company</a>
-              <i class="fa-solid fa-chevron-down text-xs"></i>
+              <a href="#" class="group-hover:text-almostBlack">Company</a>
+              <i
+                class="fa-solid fa-chevron-down text-xs cursor-pointer group-hover:-rotate-180 duration-200 group-hover:text-almostBlack"
+              ></i>
+              <ul
+                class="company-list text-sm flex flex-col gap-3 p-6 bg-white shadow-2xl rounded-xl absolute left-72 top-14 hidden"
+              >
+                <li class="hover:text-almostBlack transition duration-200">
+                  <a href="#">History</a>
+                </li>
+                <li class="hover:text-almostBlack transition duration-200">
+                  <a href="#">Our Team</a>
+                </li>
+                <li class="hover:text-almostBlack transition duration-200">
+                  <a href="#">Blog</a>
+                </li>
+              </ul>
             </li>
             <li class="hover:text-almostBlack transition-all duration-200">
               <a href="#">Careers</a>
@@ -63,6 +132,112 @@
             Register
           </button>
         </div>
+        <aside
+          class="menu absolute w-60 min-h-screen bg-white top-0 right-0 p-6 flex flex-col gap-8 hidden lg:hidden z-20"
+        >
+          <i
+            class="close fa-solid fa-xmark text-almostBlack text-2xl self-end cursor-pointer"
+          ></i>
+          <ul class="flex flex-col gap-4">
+            <li class="nav-features group">
+              <a href="#" class="hover:text-almostBlack"
+                >Features
+                <i
+                  class="arrow fa-solid fa-chevron-down text-xs duration-200 group-hover:text-almostBlack ml-3"
+                ></i
+              ></a>
+              <ul
+                class="flex flex-col gap-3 mt-5 mb-1 ml-4 nav-features-list hidden"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 hover:text-almostBlack"
+                    ><div class="w-5 h-5">
+                      <img
+                        src="./images/icon-todo.svg"
+                        class="object-cover"
+                        alt=""
+                      />
+                    </div>
+                    Todo List</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 hover:text-almostBlack"
+                    ><div class="w-5 h-5">
+                      <img
+                        src="./images/icon-calendar.svg"
+                        class="object-cover"
+                        alt=""
+                      />
+                    </div>
+                    Calendar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 hover:text-almostBlack"
+                    ><div class="w-5 h-5">
+                      <img
+                        src="./images/icon-reminders.svg"
+                        class="object-cover"
+                        alt=""
+                      />
+                    </div>
+                    Remainders</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center gap-2 hover:text-almostBlack"
+                    ><div class="w-5 h-5">
+                      <img
+                        src="./images/icon-planning.svg"
+                        class="object-cover"
+                        alt=""
+                      />
+                    </div>
+                    Planning</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-company">
+              <a href="#" class="hover:text-almostBlack"
+                >Company
+                <i
+                  class="arrow-2 fa-solid fa-chevron-down text-xs duration-200 group-hover:text-almostBlack ml-3"
+                ></i
+              ></a>
+              <ul
+                class="nav-company-list flex flex-col gap-3 mt-5 mb-1 ml-4 hidden"
+              >
+                <li><a href="#" class="hover:text-almostBlack">History</a></li>
+                <li><a href="#" class="hover:text-almostBlack">Our Team</a></li>
+                <li><a href="#" class="hover:text-almostBlack">Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="hover:text-almostBlack">Careers</a></li>
+            <li><a href="#" class="hover:text-almostBlack">About</a></li>
+          </ul>
+          <div class="flex flex-col items-center gap-3">
+            <a
+              href="#"
+              class="text-sm hover:text-almostBlack transition duration-200"
+              >Login</a
+            >
+            <button
+              class="text-sm w-full border-2 border-mediumGray rounded-xl px-4 py-2 hover:border-almostBlack hover:text-almostBlack transition-all duration-200"
+            >
+              Register
+            </button>
+          </div>
+        </aside>
       </nav>
       <section class="grid lg:grid-cols-2 container mx-auto gap-10 lg:p-10">
         <article
@@ -120,6 +295,7 @@
         </picture>
       </section>
     </header>
+    <script src="./script.js"></script>
   </body>
 </html>
 <!-- 
